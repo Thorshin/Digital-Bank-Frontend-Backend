@@ -63,6 +63,3 @@ cd ../digital-banking-angular-front
 npm test -- --watch=false
 ```
 
-## Contribution
-
-Les pull requests sont les bienvenues pour améliorer le projet ou corriger des anomalies. N'hésitez pas à créer une branche et à proposer vos changements.
