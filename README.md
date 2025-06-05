@@ -45,10 +45,14 @@ L'application propose un tableau de bord où l'utilisateur peut suivre ses compt
 
 ## Captures d'écran
 
-Quelques exemples de l'interface se trouvent dans le dossier `screenshots` :
+Quelques exemples de l'interface :
 
+1. Liste des comptes:
+   
 ![Liste des comptes](screenshots/screenshot1.png)
 
+2. Détail d'un compte:
+   
 ![Détail d'un compte](screenshots/screenshot2.png)
 
 ## Tests
