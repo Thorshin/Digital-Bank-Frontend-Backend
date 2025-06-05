@@ -1,30 +1,43 @@
 # Banque Digitale - Frontend et Backend
 
-Ce dépôt contient une application complète de banque digitale réalisée avec Angular pour la partie frontend et Spring Boot pour la partie backend.
+Ce projet regroupe une API REST développée avec **Spring Boot** et une application Angular servant d'interface web. Il illustre la gestion d'une banque en ligne avec la possibilité de consulter et d'administrer différents comptes.
 
 ## Présentation
 
-L'application permet de gérer des comptes bancaires, d'effectuer des opérations de crédit et de débit et d'afficher les historiques des opérations. Le frontend communique avec l'API REST exposée par le backend.
+L'application propose un tableau de bord où l'utilisateur peut suivre ses comptes courants et d'épargne. Des opérations de crédit ou de débit peuvent être réalisées directement depuis l'interface. Chaque transaction est enregistrée afin de fournir un historique clair.
+
+### Fonctionnalités
+- Visualisation des soldes en temps réel
+- Liste détaillée des opérations effectuées
+- Réalisation de virements entre comptes
+- Recherche par nom de client ou numéro de compte
+
+## Architecture
+
+- **digital-banking-spring-backend** : expose l'API et gère l'accès à la base de données.
+- **digital-banking-angular-front** : consomme cette API et présente les informations à l'utilisateur.
 
 ## Prérequis
 
 - **Node.js** et **npm** pour exécuter l'interface Angular.
-- **Java 21** ainsi que **Maven** (via le wrapper fourni) pour le backend Spring Boot.
+- **Java 21** et **Maven** (ou le wrapper `mvnw`) pour le backend Spring Boot.
+- **MySQL** installé via **XAMPP** pour la base de données.
 
 ## Installation
 
 1. Cloner le dépôt.
-2. Installer les dépendances du frontend :
+2. Démarrer MySQL depuis **XAMPP**.
+3. Installer les dépendances du frontend :
    ```bash
    cd digital-banking-angular-front
    npm install
    ```
-3. Lancer le backend :
+4. Lancer le backend :
    ```bash
    cd ../digital-banking-spring-backend
    ./mvnw spring-boot:run
    ```
-4. Dans un autre terminal, démarrer l'application Angular :
+5. Dans un autre terminal, démarrer l'application Angular :
    ```bash
    cd ../digital-banking-angular-front
    npm start
@@ -32,7 +45,7 @@ L'application permet de gérer des comptes bancaires, d'effectuer des opération
 
 ## Captures d'écran
 
-Quelques exemples de l'interface utilisateur sont disponibles dans le dossier `screenshots` :
+Quelques exemples de l'interface se trouvent dans le dossier `screenshots` :
 
 ![Liste des comptes](screenshots/screenshot1.png)
 
@@ -40,7 +53,7 @@ Quelques exemples de l'interface utilisateur sont disponibles dans le dossier `s
 
 ## Tests
 
-Des tests unitaires sont fournis pour le frontend et le backend. Ils peuvent être lancés avec :
+Pour vous assurer que tout fonctionne correctement, vous pouvez lancer les tests unitaires :
 
 ```bash
 cd digital-banking-spring-backend
@@ -50,3 +63,6 @@ cd ../digital-banking-angular-front
 npm test -- --watch=false
 ```
 
+## Contribution
+
+Les pull requests sont les bienvenues pour améliorer le projet ou corriger des anomalies. N'hésitez pas à créer une branche et à proposer vos changements.
